@@ -12,6 +12,7 @@ public:
 	
 	Nave(float x, float y, float width, float height);
 
+	void update() override;
 	void draw() override;
 
 };

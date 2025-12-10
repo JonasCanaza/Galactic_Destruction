@@ -15,6 +15,7 @@ private:
 
 	void initNave();
 
+	void update();
 	void draw();
 
 public:

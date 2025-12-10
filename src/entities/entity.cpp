@@ -32,3 +32,13 @@ float Entity::getHeight() const
 {
 	return height;
 }
+
+void Entity::setX(float newX)
+{
+	this->x = newX;
+}
+
+void Entity::setY(float newY)
+{
+	this->y = newY;
+}

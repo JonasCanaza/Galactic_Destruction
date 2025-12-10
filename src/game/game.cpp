@@ -12,6 +12,14 @@ void Game::initNave()
 	entities.push_back(new Nave(NaveConfig::POS_X, INITIAL_POS_Y, NaveConfig::WIDTH, NaveConfig::HEIGHT));
 }
 
+void Game::update()
+{
+	for (size_t i = 0; i < entities.size(); i++)
+	{
+		entities[i]->update();
+	}
+}
+
 void Game::draw()
 {
 	BeginDrawing();
@@ -48,6 +56,7 @@ void Game::play()
 {
     while (!WindowShouldClose() && isRunning)
     {
+		update();
 		draw();
     }
 }

@@ -2,9 +2,39 @@
 
 #include "raylib.h"
 
+#include "entities/nave/nave_config.h"
+#include <game/game_constants.h>
+
 Nave::Nave(float x, float y, float width, float height) : Entity(x, y, width, height)
 {
 
+}
+
+void Nave::update()
+{
+	float newY = getY();
+
+	if (IsKeyDown(KEY_W))
+	{
+		newY -= NaveConfig::SPEED * GetFrameTime();
+	}
+
+	if (IsKeyDown(KEY_S))
+	{
+		newY += NaveConfig::SPEED * GetFrameTime();
+	}
+
+	if (newY < 0)
+	{
+		newY = 0;
+	}
+
+	if (newY + getHeight() > SCREEN_HEIGHT)
+	{
+		newY = SCREEN_HEIGHT - getHeight();
+	}
+
+	setY(newY);
 }
 
 void Nave::draw()
