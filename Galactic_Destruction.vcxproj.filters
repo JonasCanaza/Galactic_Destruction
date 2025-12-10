@@ -5,10 +5,22 @@
     <ClCompile Include="src\game\game.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="src\entities\entity.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\nave\nave.cpp">
+      <Filter>Entities\Nave</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Game">
       <UniqueIdentifier>{2bddfef9-5c78-4d4b-99f7-4d0810122401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{eb5bc783-e467-4e65-9823-0200fd154dbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Nave">
+      <UniqueIdentifier>{e5d08561-084c-4523-8c07-9e614625392d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -17,6 +29,15 @@
     </ClInclude>
     <ClInclude Include="src\game\game_constants.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\entity.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\nave\nave.h">
+      <Filter>Entities\Nave</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\nave\nave_config.h">
+      <Filter>Entities\Nave</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
