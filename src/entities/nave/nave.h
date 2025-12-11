@@ -15,4 +15,6 @@ public:
 	void update() override;
 	void draw() override;
 
+	bool tryShoot();
+
 };

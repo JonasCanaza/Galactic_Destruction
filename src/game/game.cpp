@@ -1,5 +1,7 @@
 #include "game/game.h"
 
+#include <iostream>
+
 #include "raylib.h"
 
 #include "game_constants.h"
@@ -17,6 +19,13 @@ void Game::update()
 	for (size_t i = 0; i < entities.size(); i++)
 	{
 		entities[i]->update();
+
+		Nave* nave = dynamic_cast<Nave*>(entities[i]);
+
+		if (nave && nave->tryShoot())
+		{
+			std::cout << "Shot!" << std::endl;
+		}
 	}
 }
 

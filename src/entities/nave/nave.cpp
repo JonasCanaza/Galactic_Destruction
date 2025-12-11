@@ -3,7 +3,7 @@
 #include "raylib.h"
 
 #include "entities/nave/nave_config.h"
-#include <game/game_constants.h>
+#include "game/game_constants.h"
 
 Nave::Nave(float x, float y, float width, float height) : Entity(x, y, width, height)
 {
@@ -45,4 +45,9 @@ void Nave::draw()
 	int drawHeight = static_cast<int>(getHeight());
 
 	DrawRectangle(drawX, drawY, drawWidth, drawHeight, WHITE);
+}
+
+bool Nave::tryShoot()
+{
+	return IsKeyPressed(KEY_SPACE);
 }
