@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "entities/nave/nave.h"
+#include "entities/bullet/bullet.h"
 
 using namespace std;
 

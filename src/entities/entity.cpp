@@ -6,6 +6,7 @@ Entity::Entity(float x, float y, float width, float height)
 	this->y = y;
 	this->width = width;
 	this->height = height;
+	isActive = true;
 }
 
 Entity::~Entity()
@@ -33,6 +34,11 @@ float Entity::getHeight() const
 	return height;
 }
 
+bool Entity::getActive() const
+{
+	return isActive;
+}
+
 void Entity::setX(float newX)
 {
 	this->x = newX;
@@ -41,4 +47,9 @@ void Entity::setX(float newX)
 void Entity::setY(float newY)
 {
 	this->y = newY;
+}
+
+void Entity::setActive(bool newActive)
+{
+	this->isActive = newActive;
 }

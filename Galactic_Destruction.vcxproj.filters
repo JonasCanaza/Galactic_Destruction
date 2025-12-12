@@ -11,6 +11,9 @@
     <ClCompile Include="src\entities\nave\nave.cpp">
       <Filter>Entities\Nave</Filter>
     </ClCompile>
+    <ClCompile Include="src\entities\bullet\bullet.cpp">
+      <Filter>Entities\Bullet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Game">
@@ -21,6 +24,9 @@
     </Filter>
     <Filter Include="Entities\Nave">
       <UniqueIdentifier>{e5d08561-084c-4523-8c07-9e614625392d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bullet">
+      <UniqueIdentifier>{197870a5-f0c0-4850-8708-7132da910643}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +44,12 @@
     </ClInclude>
     <ClInclude Include="src\entities\nave\nave_config.h">
       <Filter>Entities\Nave</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\bullet\bullet.h">
+      <Filter>Entities\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\bullet\bullet_config.h">
+      <Filter>Entities\Bullet</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

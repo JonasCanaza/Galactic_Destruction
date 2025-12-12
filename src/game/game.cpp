@@ -1,11 +1,10 @@
 #include "game/game.h"
 
-#include <iostream>
-
 #include "raylib.h"
 
 #include "game_constants.h"
 #include "entities/nave/nave_config.h"
+#include "entities/bullet/bullet_config.h"
 
 void Game::initNave()
 {
@@ -24,7 +23,22 @@ void Game::update()
 
 		if (nave && nave->tryShoot())
 		{
-			std::cout << "Shot!" << std::endl;
+			float bulletX = nave->getX() + nave->getWidth();
+
+			float bulletY1 = nave->getY() + NaveConfig::CANNON_OFFSET;
+			float bulletY2 = nave->getY() + nave->getHeight() - BulletConfig::HEIGHT - NaveConfig::CANNON_OFFSET;
+
+			entities.push_back(new Bullet(bulletX, bulletY1, BulletConfig::WIDTH, BulletConfig::HEIGHT));
+			entities.push_back(new Bullet(bulletX, bulletY2, BulletConfig::WIDTH, BulletConfig::HEIGHT));
+		}
+	}
+
+	for (int i = static_cast<int>(entities.size()) - 1; i >= 0; i--)
+	{
+		if (!entities[i]->getActive())
+		{
+			delete entities[i];
+			entities.erase(entities.begin() + i);
 		}
 	}
 }

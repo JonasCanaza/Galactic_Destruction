@@ -89,12 +89,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\entities\bullet\bullet.cpp" />
     <ClCompile Include="src\entities\entity.cpp" />
     <ClCompile Include="src\entities\nave\nave.cpp" />
     <ClCompile Include="src\game\game.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\entities\bullet\bullet.h" />
+    <ClInclude Include="src\entities\bullet\bullet_config.h" />
     <ClInclude Include="src\entities\entity.h" />
     <ClInclude Include="src\entities\nave\nave.h" />
     <ClInclude Include="src\entities\nave\nave_config.h" />
